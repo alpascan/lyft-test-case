@@ -6,7 +6,7 @@ Feature: Rent a car for lyft
   Scenario: Happy path for renting as a logged in user
     Given I am logged into the lyft portal
     And I am on the rent a car page
-    When I press rent a car, 
+    When I press rent a car
     And I am presented with a list of cars in my vicinity
     And I select a random car
     And I confirm the car
