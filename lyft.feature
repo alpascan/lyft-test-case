@@ -59,4 +59,17 @@ Feature: Rent a car for lyft
     When I select one of the options 
     Then I am presented with a list of cars in my search location
     
+  Scenario: Cancelation of process
+    Given I am on the rent a car page
+    When I press rent a car
+    And I select a random car
+    And I log in 
+    And I cancel the rent
+    Then I am on the rent a car page
 
+  Scenario: Error displayed 
+    Given I am on the rent a car page
+    When I press rent a car
+    And something is wrong with the backend
+    Then I am presented with an error message
+    And I am provided guidance for the process
